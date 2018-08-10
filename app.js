@@ -11,10 +11,10 @@ request({
     url:`http://api.openweathermap.org/data/2.5/weather?appid=5fd5e9f589b704c2197465649c3c6e93&q=${argv.city}`,
     json:true
     }, function (error, response, body) {
-  console.log('error:', error); // Print the error if one occurred
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('error:', error);
+  console.log('statusCode:', response && response.statusCode); 
     console.log('body: ',body);
-//  console.log(`address: ${body.results[0].formatted_address}`);
+
     if(error){
         console.log('Unable to connect to openWeatherMap server');
     }
